@@ -1,13 +1,9 @@
-# project
-_site
+*.gem
+.bundle
 .sass-cache
-.vagrant
-
-# general
-.DS_Store
-Thumbs.db
-ehthumbs.db
-
+_site
 Gemfile.lock
 
-beautiful-jekyll-theme-*.gem
+# Ignore test files
+index.html
+page.html

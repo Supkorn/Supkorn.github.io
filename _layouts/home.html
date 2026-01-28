@@ -1,122 +1,165 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html lang="en">
 
-{{ content }}
+  {% include head.html %}
 
-{% assign posts = paginator.posts | default: site.posts %}
+  <body id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="#page-top">Start</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#page-top">Home</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#about">About</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#services">Services</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-<!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-<ul class="posts-list list-unstyled" role="list">
-  {% for post in posts %}
-  <li class="post-preview">
-    <article>
-
-      {%- capture thumbnail -%}
-        {% if post.thumbnail-img %}
-          {{ post.thumbnail-img }}
-        {% elsif post.cover-img %}
-          {% if post.cover-img.first %}
-            {{ post.cover-img[0].first.first }}
-          {% else %}
-            {{ post.cover-img }}
-          {% endif %}
-        {% else %}
-        {% endif %}
-      {% endcapture %}
-      {% assign thumbnail=thumbnail | strip %}
-
-      {% if site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-normal">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container text-center my-auto">
+        <h1 class="mb-1">Bootstrap</h1>
+        <h3 class="mb-5">
+          <em>A Bootstrap Theme for Jekyll</em>
+        </h3>
+        <a id="cta-button" class="btn btn-primary btn-xl js-scroll-trigger btn-no-bold" href="#about">Find Out More</a>
       </div>
-      {% endif %}
-      {% endif %}
+      <div class="overlay"></div>
+    </header>
 
-      <a href="{{ post.url | absolute_url }}">
-        <h2 class="post-title">{{ post.title | strip_html }}</h2>
-
-        {% if post.subtitle %}
-          <h3 class="post-subtitle">
-          {{ post.subtitle | strip_html }}
-          </h3>
-        {% endif %}
-      </a>
-
-      {% if post.author %}
-        <span>By <strong>{{ post.author | strip_html }}</strong></span>
-      {% endif %}
-      <p class="post-meta">
-        {% assign date_format = site.date_format | default: "%B %-d, %Y" %}
-        Posted on {{ post.date | date: date_format }}
-      </p>
-
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-small">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
+    <!-- About -->
+    <section class="content-section bg-light" id="about">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2>Jekyll-theme-onepage is the perfect theme for your next project!</h2>
+          </div>
+          <div class="col-lg-6">
+            <img style="height:300px; overflow: hidden;" src="assets/img/advanced-feature-2.jpg" title="About" />
+          </div>
+          <div class="col-lg-6">
+            <p class="mb-5 desc-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit nulla, iaculis nec efficitur sed, fermentum sed odio. Nunc commodo enim eget elit egestas, ac finibus nisl tempus. Integer elementum sapien ut tortor pulvinar fringilla fringilla ac felis.</p>
+          </div>
+        </div>
       </div>
-      {% endif %}
+    </section>
 
-      {% unless site.feed_show_excerpt == false %}
-      {% if thumbnail != "" %}
-      <div class="post-image post-image-short">
-        <a href="{{ post.url | absolute_url }}" aria-label="Thumbnail">
-          <img src="{{ thumbnail | absolute_url }}" alt="Post thumbnail">
-        </a>
+    <!-- Services -->
+    <section class="content-section bg-primary text-white text-center" id="services">
+      <div class="container">
+        <div class="content-section-heading">
+          <h3 class="text-secondary mb-0">Services</h3>
+          <h2 class="mb-5">What We Offer</h2>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-screen-smartphone"></i>
+            </span>
+            <h4>
+              <strong>Responsive</strong>
+            </h4>
+            <p class="text-faded mb-0">Looks great on any screen size!</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-pencil"></i>
+            </span>
+            <h4>
+              <strong>Redesigned</strong>
+            </h4>
+            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-like"></i>
+            </span>
+            <h4>
+              <strong>Favorited</strong>
+            </h4>
+            <p class="text-faded mb-0">Millions of users
+              <i class="fa fa-heart"></i>
+              Start Bootstrap!</p>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <span class="service-icon rounded-circle mx-auto mb-3">
+              <i class="icon-mustache"></i>
+            </span>
+            <h4>
+              <strong>Question</strong>
+            </h4>
+            <p class="text-faded mb-0">I mustache you a question...</p>
+          </div>
+        </div>
       </div>
-      {% endif %}
+    </section>
 
-      <div class="post-entry">
-        {% assign excerpt_length = site.excerpt_length | default: 50 %}
-        {{ post.excerpt | strip_html | truncatewords: excerpt_length }}
-        {% assign excerpt_word_count = post.excerpt | number_of_words %}
-        {% if post.content != post.excerpt or excerpt_word_count > excerpt_length %}
-          <a href="{{ post.url | absolute_url }}" class="post-read-more">[Read&nbsp;More]</a>
-        {% endif %}
-      </div>
-      {% endunless %}
-
-      {% if site.feed_show_tags != false and post.tags.size > 0 %}
-      <div class="blog-tags">
-        <span>Tags:</span>
-        <!-- role="list" needed so that `list-style: none` in Safari doesn't remove the list semantics -->
-        <ul class="d-inline list-inline" role="list">
-          {% for tag in post.tags %}
-          <li class="list-inline-item">
-            <a href="{{ '/tags' | absolute_url }}#{{- tag -}}">{{- tag -}}</a>
-          </li>
+    <!-- Portfolio -->
+    <section class="content-section" id="portfolio">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">Portfolio</h3>
+          <h2 class="mb-5">Recent Projects</h2>
+        </div>
+        <div class="row no-gutters">
+          {% assign mid = site.posts | sort: 'date' %}
+          {% assign posts = mid | reverse %}
+          {% for post in posts limit:4 %}          
+            <div class="col-lg-6">
+              <a class="portfolio-item" href="{{ post.url | relative_url }}">
+                <span class="caption">
+                  <span class="caption-content">
+                    <h2>{{ post.title | escape }}</h2>
+                    <p class="mb-0">{{ post.subtitle | escape }}</p>
+                  </span>
+                </span>
+                <img class="img-fluid" src="assets/img/{{ post.poster | relative_url }}" alt="">
+              </a>
+            </div>
           {% endfor %}
-        </ul>
+        </div>
       </div>
-      {% endif %}
+    </section>
 
-    </article>
-  </li>
-  {% endfor %}
-</ul>
+    <!-- Map -->
+    <section id="contact" class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86684.44774751233!2d-1.630095528999009!3d47.23831721314243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ee81f0a8aead%3A0x40d37521e0ded30!2sNantes!5e0!3m2!1sfr!2sfr!4v1518272910918" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <br/>
+    </section>
 
-{% if paginator.total_pages > 1 %}
-<ul class="pagination main-pager">
-  {% if paginator.previous_page %}
-  <li class="page-item previous">
-    <a class="page-link" href="{{ paginator.previous_page_path | absolute_url }}">
-      <i class="fas fa-arrow-left" alt="Newer Posts"></i>
-      <span class="d-none d-sm-inline-block">Newer Posts</span>
+    {% include footer.html %}
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
     </a>
-  </li>
-  {% endif %}
-  {% if paginator.next_page %}
-  <li class="page-item next">
-    <a class="page-link" href="{{ paginator.next_page_path | absolute_url }}">
-      <span class="d-none d-sm-inline-block">Older Posts</span>
-      <i class="fas fa-arrow-right" alt="Older Posts"></i>
-    </a>
-  </li>
-  {% endif %}
-</ul>
-{% endif %}
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{ "/assets/js/vendor/jquery.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/vendor/bootstrap.bundle.min.js" | relative_url }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ "/assets/js/vendor/jquery.easing.min.js" | relative_url }}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+
+  </body>
+
+</html>
