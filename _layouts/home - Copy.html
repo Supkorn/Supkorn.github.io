@@ -33,26 +33,15 @@
 
     <!-- Header -->
     <header class="masthead d-flex">
-      <div class="container my-auto">
-        <div class="row align-items-center"> 
-          <div class="col-lg-7 text-left"> 
-            <!-- <h1 class="mb-1">Suparada Pookapun</h1> -->         
-            <h1 class="mb-1">
-              <span style="color: #D81B60; font-weight: bold;">punrada Pookapun</span>
-            
-            <h3 style="font-size: 2.2rem; font-weight: 800; color: #444; margin-top: 10px;">
-              <em>My Portfolio</em>
-            </h3>
-            <br>
+      <div class="container text-center my-auto">
 
-            <a id="cta-button" class="btn btn-primary btn-xl js-scroll-trigger btn-no-bold" href="#about">Find Out More</a>
-          </div>
+        <img src="assets/img/my-icon.png" alt="Profile Icon" style="width: 150px; height: auto; margin-bottom: 20px; border-radius: 50%;">
 
-          <div class="col-lg-5 text-right">
-            <img src="/assets/img/ลูกสาว.png" alt="Suparada" style="width: 100%; max-width: 400px; height: auto;">
-          </div>
-
-        </div>
+        <h1 class="mb-1">Suparada Pookapun</h1>
+        <h3 class="mb-5">
+          <em>My Portfolio</em>
+        </h3>
+        <a id="cta-button" class="btn btn-primary btn-xl js-scroll-trigger btn-no-bold" href="#about">Find Out More</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -62,14 +51,14 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>รวบรวมบันทึกการเดินทางและการเรียนรู้ของ<br><br><strong>ปุณรดา พุกกะพันธุ์</strong><br><br>นักเรียนชั้น ป.6 ที่พร้อมจะพัฒนาตนเองในทุกๆวัน<br><br></h2>
+            <h2>รวบรวมบันทึกการเดินทางและการเรียนรู้ของ<br> ปุณรดา พุกกะพันธุ์<br> นักเรียนชั้น ป.6 ที่พร้อมจะพัฒนาตนเองในทุกๆวัน</h2>
             <!-- <h2>Jekyll-theme-onepage is the perfect theme for your next project!</h2> -->
           </div>
           <div class="col-lg-6">
             <img style="height:300px; overflow: hidden;" src="assets/img/advanced-feature-2.jpg" title="About" />
           </div>
           <div class="col-lg-6">
-            <p class="mb-5 desc-font">เชื่อว่าการเรียนรู้ไม่ได้จำกัดอยู่แค่ในห้องเรียน ผลงานใน Portfolio นี้คือบันทึกประสบการณ์ที่ได้ลงมือทำจริง ทั้งในด้านวิชาการ ศิลปะ และกิจกรรมต่างๆ สนุกกับการค้นหาความท้าทายใหม่ๆ และมุ่งมั่นที่จะพัฒนาทักษะของตนเองในทุกวัน เพื่อเตรียมความพร้อมสำหรับก้าวต่อไปในอนาคต</p>
+            <p class="mb-5 desc-font">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis velit nulla, iaculis nec efficitur sed, fermentum sed odio. Nunc commodo enim eget elit egestas, ac finibus nisl tempus. Integer elementum sapien ut tortor pulvinar fringilla fringilla ac felis.</p>
           </div>
         </div>
       </div>
@@ -79,8 +68,8 @@
     <section class="content-section bg-primary text-white text-center" id="services">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Skills</h3>
-          <h2 class="mb-5">What I love to do</h2>
+          <h3 class="text-secondary mb-0">Services</h3>
+          <h2 class="mb-5">What We Offer</h2>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -135,7 +124,7 @@
         <div class="row no-gutters">
           {% assign mid = site.posts | sort: 'date' %}
           {% assign posts = mid | reverse %}
-          {% for post in posts limit:6 %}          
+          {% for post in posts limit:4 %}          
             <div class="col-lg-6">
               <a class="portfolio-item" href="{{ post.url | relative_url }}">
                 <span class="caption">
@@ -147,37 +136,15 @@
                 <img class="img-fluid" src="assets/img/{{ post.poster | relative_url }}" alt="">
               </a>
             </div>
-          {% endfor %} </div>
-
-        <div class="text-center mt-5">
-          <a class="btn btn-primary btn-xl" href="{{ '/portfolio/' | relative_url }}">ผลงานทั้งหมด</a>
+          {% endfor %}
         </div>
       </div>
     </section>
 
     <!-- Map -->
-    <section id="contact" class="content-section bg-light text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <i class="fa fa-quote-left fa-3x mb-4 text-primary" style="opacity: 0.3;"></i>
-            
-            <h2 class="mb-4" style="font-style: italic; font-weight: 300; line-height: 1.6;">
-              "The future belongs to those who believe in the beauty of their dreams."
-            </h2>
-            
-            <h4 class="text-secondary mb-5">
-              (อนาคตเป็นของคนที่เชื่อในความงดงามของความฝัน)
-            </h4>
-            
-            <hr class="small mb-5">
-            
-            <p class="lead">
-              ขอบคุณที่แวะชมบันทึกประสบการณ์และการเติบโตในโลกแห่งการเรียนรู้นี้
-            </p>
-          </div>
-        </div>
-      </div>
+    <section id="contact" class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86684.44774751233!2d-1.630095528999009!3d47.23831721314243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4805ee81f0a8aead%3A0x40d37521e0ded30!2sNantes!5e0!3m2!1sfr!2sfr!4v1518272910918" width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      <br/>
     </section>
 
     {% include footer.html %}
