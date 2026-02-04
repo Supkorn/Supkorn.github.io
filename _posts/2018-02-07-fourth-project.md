@@ -4,6 +4,7 @@ title:  "Forth Tell me, what is wrong with your titles"
 subtitle:  "I don't know son, don't know..."
 date:   2018-02-07 21:40:47 +0100
 poster: "portfolio-4.jpg"
+category: Activities
 ---
 
 Etiam nec nisi magna. Maecenas vel pulvinar risus. Aliquam erat volutpat. Etiam nec nibh at tortor faucibus venenatis vel eget sapien. Donec iaculis vulputate justo, vel laoreet sem viverra a. Morbi vel arcu ante. Cras at magna eget purus pharetra lobortis.

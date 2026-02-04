@@ -4,6 +4,7 @@ title:  "Third project"
 subtitle:  "Get him boy, get him"
 date:   2018-02-07 20:40:47 +0100
 poster: "portfolio-3.jpg"
+category: Music
 ---
 
 Etiam nec nisi magna. Maecenas vel pulvinar risus. Aliquam erat volutpat. Etiam nec nibh at tortor faucibus venenatis vel eget sapien. Donec iaculis vulputate justo, vel laoreet sem viverra a. Morbi vel arcu ante. Cras at magna eget purus pharetra lobortis.

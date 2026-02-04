@@ -4,6 +4,7 @@ title:  "Last but not least project"
 subtitle:  "Do you remember the title of the first ?"
 date:   2018-02-07 22:30:47 +0100
 poster: "bg-masthead.jpg"
+category: Learning
 ---
 
 Etiam nec nisi magna. Maecenas vel pulvinar risus. Aliquam erat volutpat. Etiam nec nibh at tortor faucibus venenatis vel eget sapien. Donec iaculis vulputate justo, vel laoreet sem viverra a. Morbi vel arcu ante. Cras at magna eget purus pharetra lobortis.

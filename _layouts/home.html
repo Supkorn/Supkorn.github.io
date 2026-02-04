@@ -4,7 +4,6 @@
   {% include head.html %}
 
   <body id="page-top">
-    <!-- Navigation -->
     <a class="menu-toggle rounded" href="#">
       <i class="fa fa-bars"></i>
     </a>
@@ -20,50 +19,59 @@
           <a class="js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
+          <a class="js-scroll-trigger" href="#services">Skills</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#contact">Contact</a>
+          <a class="js-scroll-trigger" href="#contact">Message</a>
         </li>
       </ul>
     </nav>
 
-    <!-- Header -->
     <header class="masthead d-flex">
       <div class="container my-auto">
         <div class="row align-items-center"> 
           <div class="col-lg-7 text-left"> 
-            <!-- <h1 class="mb-1">Suparada Pookapun</h1> -->         
             <h1 class="mb-1">
-              <span style="color: #D81B60; font-weight: bold;">punrada Pookapun</span>
-            
+              <span style="color: #D81B60; font-weight: bold;">Punrada Pookapun</span>
+            </h1>
             <h3 style="font-size: 2.2rem; font-weight: 800; color: #444; margin-top: 10px;">
               <em>My Portfolio</em>
             </h3>
             <br>
-
             <a id="cta-button" class="btn btn-primary btn-xl js-scroll-trigger btn-no-bold" href="#about">Find Out More</a>
           </div>
 
           <div class="col-lg-5 text-right">
-            <img src="/assets/img/ลูกสาว.png" alt="Suparada" style="width: 100%; max-width: 400px; height: auto;">
+            <img src="{{ '/assets/img/kim-01.jpg' | relative_url }}" alt="Punrada" 
+              style="width: 100%; max-width: 400px; height: auto; 
+              /* ฟุ้งด้านล่าง */
+              -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%), 
+              /* ฟุ้งด้านบน */
+                                  linear-gradient(to top, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+              /* ฟุ้งด้านซ้าย */
+                                  linear-gradient(to left, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+              /* ฟุ้งด้านขวา */
+                                  linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+              mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%), 
+                          linear-gradient(to top, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+                          linear-gradient(to left, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%),
+                          linear-gradient(to right, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+              -webkit-mask-composite: source-in;
+              mask-composite: intersect;">
           </div>
-
         </div>
       </div>
       <div class="overlay"></div>
     </header>
 
-    <!-- About -->
     <section class="content-section bg-light" id="about">
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
             <h2>รวบรวมบันทึกการเดินทางและการเรียนรู้ของ<br><br><strong>ปุณรดา พุกกะพันธุ์</strong><br><br>นักเรียนชั้น ป.6 ที่พร้อมจะพัฒนาตนเองในทุกๆวัน<br><br></h2>
-            <!-- <h2>Jekyll-theme-onepage is the perfect theme for your next project!</h2> -->
           </div>
           <div class="col-lg-6">
             <img style="height:300px; overflow: hidden;" src="assets/img/advanced-feature-2.jpg" title="About" />
@@ -75,7 +83,6 @@
       </div>
     </section>
 
-    <!-- Services -->
     <section class="content-section bg-primary text-white text-center" id="services">
       <div class="container">
         <div class="content-section-heading">
@@ -84,48 +91,48 @@
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-screen-smartphone"></i>
-            </span>
-            <h4>
-              <strong>Responsive</strong>
-            </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
+            <a href="{{ '/portfolio/#learning-section' | relative_url }}" style="text-decoration: none;">
+              <span class="service-icon rounded-circle mx-auto mb-3">
+                <i class="fa fa-graduation-cap"></i>
+              </span>
+              <h4 class="text-white"><strong>Learning</strong></h4>
+            </a>
+            <p class="text-faded mb-0">สนุกกับการเรียนรู้สิ่งใหม่ๆ</p>
           </div>
+          
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-pencil"></i>
-            </span>
-            <h4>
-              <strong>Redesigned</strong>
-            </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+            <a href="{{ '/portfolio/#arts-section' | relative_url }}" style="text-decoration: none;">
+              <span class="service-icon rounded-circle mx-auto mb-3">
+                <i class="fa fa-paint-brush"></i>
+              </span>
+              <h4 class="text-white"><strong>Arts</strong></h4>
+            </a>
+            <p class="text-faded mb-0">งานศิลปะและความคิดสร้างสรรค์</p>
           </div>
+
           <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-like"></i>
-            </span>
-            <h4>
-              <strong>Favorited</strong>
-            </h4>
-            <p class="text-faded mb-0">Millions of users
-              <i class="fa fa-heart"></i>
-              Start Bootstrap!</p>
+            <a href="{{ '/portfolio/#music-section' | relative_url }}" style="text-decoration: none;">
+              <span class="service-icon rounded-circle mx-auto mb-3">
+                <i class="fa fa-music"></i>
+              </span>
+              <h4 class="text-white"><strong>Music</strong></h4>
+            </a>
+            <p class="text-faded mb-0">เพลิดเพลินไปกับดนตรีและจังหวะ</p>
           </div>
+
           <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
-            </span>
-            <h4>
-              <strong>Question</strong>
-            </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
+            <a href="{{ '/portfolio/#activities-section' | relative_url }}" style="text-decoration: none;">
+              <span class="service-icon rounded-circle mx-auto mb-3">
+                <i class="fa fa-star"></i>
+              </span>
+              <h4 class="text-white"><strong>Activities</strong></h4>
+            </a>
+            <p class="text-faded mb-0">เรียนรู้จากลงมือทำและกิจกรรม</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio -->
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
@@ -147,7 +154,8 @@
                 <img class="img-fluid" src="assets/img/{{ post.poster | relative_url }}" alt="">
               </a>
             </div>
-          {% endfor %} </div>
+          {% endfor %} 
+        </div>
 
         <div class="text-center mt-5">
           <a class="btn btn-primary btn-xl" href="{{ '/portfolio/' | relative_url }}">ผลงานทั้งหมด</a>
@@ -155,7 +163,6 @@
       </div>
     </section>
 
-    <!-- Map -->
     <section id="contact" class="content-section bg-light text-center">
       <div class="container">
         <div class="row">
@@ -182,21 +189,14 @@
 
     {% include footer.html %}
 
-    <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
       <i class="fa fa-angle-up"></i>
     </a>
 
-    <!-- Bootstrap core JavaScript -->
     <script src="{{ "/assets/js/vendor/jquery.min.js" | relative_url }}"></script>
     <script src="{{ "/assets/js/vendor/bootstrap.bundle.min.js" | relative_url }}"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="{{ "/assets/js/vendor/jquery.easing.min.js" | relative_url }}"></script>
-
-    <!-- Custom scripts for this template -->
     <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
 
   </body>
-
 </html>
